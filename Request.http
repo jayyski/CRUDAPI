@@ -1,0 +1,28 @@
+###Get token
+POST http://localhost:8000/token
+Content-Type: application/json
+
+    {
+        "username": "admin324",
+        "password": "adminadmin24324"
+    }
+
+###Get users with auzhorization token
+GET http://localhost:8000/users/
+Authorization: Bearer {{token}}
+
+###Get user
+GET http://localhost:8000/user/admin223/
+
+###Create user
+POST http://localhost:8000/create_user/
+Content-Type: application/json
+
+{
+    "username": "admin2236j",
+    "password": "adminninmin232"
+}
+
+###Delete user with auzhorization token
+DELETE http://localhost:8000/user/admin223/
+Authorization: Bearer {{token}}
